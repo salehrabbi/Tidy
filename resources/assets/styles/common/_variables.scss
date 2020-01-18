@@ -1,5 +1,4 @@
 :root {
-  --Gotham: "Gotham";
   --black: #000;
 }
 
@@ -8,7 +7,7 @@
 $black: #000;
 
 // ================= fonts
-$f: "Gotham";
+$f: "Montserrat", sans-serif;
 
 // Small tablets and large smartphones (landscape view)
 $screen-sm-max: 575px;
