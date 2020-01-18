@@ -1,0 +1,106 @@
+body {
+  font-family: $f;
+  background: #e5e5e5;
+  color: $black;
+  &.influencer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: em(226px) minmax(calc(100vh - 33.625em), auto) em(312px);
+  }
+}
+
+// =========================== influencer global code
+.main-wraper {
+  max-width: em(1420px);
+  background: $white;
+  display: grid;
+  grid-template-columns: max-content auto;
+  border: 2px solid $silver;
+  margin: em(50px) 0;
+}
+.save-changes {
+  border-top: 1px solid $silver;
+  padding: em(24px) em(38px);
+  button {
+    background: $black;
+    border-radius: 5px;
+    min-width: calc-em(190, 20);
+    min-height: calc-em(50, 20);
+    border: none;
+    color: $white;
+    font-family: $o;
+    font-size: em(20px);
+    letter-spacing: 0.002em;
+  }
+}
+.switch-buyer {
+  color: #494644;
+  font-size: em(20px);
+  font-family: $o;
+  padding: calc-em(30, 20) calc-em(60, 20);
+  i {
+    margin-left: calc-em(16, 20);
+  }
+}
+// ========================== input
+label {
+  width: 100%;
+  margin: 0;
+  span {
+    display: block;
+    font-size: em(25px);
+    letter-spacing: 0.002em;
+    font-family: $o;
+    margin-bottom: 5px;
+  }
+}
+.input-text {
+  input {
+    background: $white;
+    border: 1px solid $silver;
+    border-radius: 3px;
+    height: em(50px);
+    width: 100%;
+    padding: 0 em(30px);
+  }
+}
+
+.input-select {
+  .bootstrap-select {
+    height: 100%;
+  }
+  .dropdown-menu {
+    overflow-x: hidden;
+    li {
+      font-size: em(20px);
+    }
+  }
+  .bootstrap-select > .dropdown-toggle {
+    background: none;
+    border: 1px solid $silver;
+    padding: 0;
+  }
+  .bootstrap-select .dropdown-toggle .filter-option-inner-inner {
+    font-size: em(20px);
+    color: #000000;
+    font-weight: 700;
+  }
+  .filter-option-inner {
+    padding: em(10px) em(30px);
+    padding-right: 0;
+    border-right: 1px solid $silver;
+  }
+  .dropdown-toggle::after {
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 400;
+    content: "\f107";
+    border: none;
+    color: #000;
+    width: em(50px);
+    margin: 0;
+    text-align: center;
+  }
+  .bootstrap-select.show .dropdown-toggle::after {
+    content: "\f106";
+  }
+}

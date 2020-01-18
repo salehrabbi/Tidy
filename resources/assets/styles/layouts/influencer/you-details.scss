@@ -1,0 +1,20 @@
+.you-details {
+  padding: em(70px) em(53px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: em(49px);
+  grid-row-gap: em(48px);
+  .phone-number {
+    display: grid;
+    grid-template-columns: em(107px) 1fr;
+    grid-column-gap: em(30px);
+  }
+  .date-select {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, em(200px));
+    grid-column-gap: em(33px);
+  }
+  .input-select.full-column {
+    grid-column: 1/-1;
+  }
+}

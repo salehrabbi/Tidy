@@ -1,0 +1,33 @@
+.tab-menu {
+  border-right: 1px solid $silver;
+  min-width: em(351px);
+  padding-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto max-content;
+  .nav-tabs {
+    display: block;
+    border: none;
+    li {
+      padding: em(15px) em(60px);
+      position: relative;
+      a {
+        font-weight: 700;
+        font-size: em(17px);
+        color: $bombay;
+        &.active {
+          color: $masala;
+          &:after {
+            content: "";
+            height: 100%;
+            width: em(4px);
+            position: absolute;
+            right: 0;
+            top: 0;
+            background: $masala;
+          }
+        }
+      }
+    }
+  }
+}
