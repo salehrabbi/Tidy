@@ -11,11 +11,12 @@ body {
 .influencer {
   &-space {
     padding: em(70px) em(53px);
+    overflow: auto;
   }
   &-wraper {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr max-content;
+    grid-template-rows: em(904px) em(100px);
   }
 }
 
@@ -66,7 +67,8 @@ label {
     margin-bottom: 5px;
   }
 }
-button {
+button,
+.button {
   border: none;
   background: $jumbo;
   font-size: em(20px);
@@ -77,6 +79,9 @@ button {
   transition: 0.3s;
   width: calc-em(120, 20);
   height: calc-em(50, 20);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &:hover {
     background: $black;
   }
@@ -88,7 +93,8 @@ button {
     border-radius: 3px;
     height: em(50px);
     width: 100%;
-    padding: 0 em(30px);
+    padding: 0 em(17px);
+    color: $masala;
   }
   &.input-before-wraper {
     input {
@@ -111,7 +117,8 @@ button {
     border-radius: 3px;
     width: 100%;
     height: em(225px);
-    padding: em(20px);
+    padding: em(17px);
+    color: $masala;
   }
 }
 
@@ -129,6 +136,7 @@ button {
     background: none;
     border: 1px solid $silver;
     padding: 0;
+    height: em(50px);
   }
   .bootstrap-select .dropdown-toggle .filter-option-inner-inner {
     font-size: em(20px);
@@ -136,7 +144,7 @@ button {
     font-weight: 700;
   }
   .filter-option-inner {
-    padding: em(10px) em(30px);
+    padding: em(9px) em(30px);
     padding-right: 0;
     border-right: 1px solid $silver;
   }
@@ -168,5 +176,21 @@ button {
     height: 141px;
     border-radius: 50%;
     cursor: pointer;
+  }
+}
+// ============================ .heading
+.heading {
+  h4 {
+    font-family: $m;
+    font-weight: 700;
+    font-size: em(16px);
+    margin-bottom: em(18px);
+  }
+  p {
+    font-family: $p;
+    font-style: italic;
+    font-size: em(13px);
+    color: $jumbo;
+    font-weight: 700;
   }
 }
