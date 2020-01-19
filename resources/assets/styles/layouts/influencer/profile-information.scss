@@ -1,0 +1,67 @@
+.profile-information {
+  .profile-avator {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-column-gap: em(63px);
+    align-items: center;
+    margin-bottom: em(43px);
+  }
+  .avator-text {
+    .title {
+      font-size: em(25px);
+      font-family: $o;
+    }
+    .description {
+      font-family: $p;
+      font-style: italic;
+      color: $jumbo;
+      font-weight: 700;
+      font-size: em(13px);
+    }
+    .avator-email {
+      display: grid;
+      grid-template-columns: 1fr em(120px);
+      grid-column-gap: em(30px);
+      button {
+        border: none;
+        background: $jumbo;
+        font-size: em(20px);
+        font-family: $o;
+        letter-spacing: 0.02em;
+        color: $white;
+        border-radius: 5px;
+        transition: 0.3s;
+        &:hover {
+          background: $black;
+        }
+      }
+    }
+  }
+}
+
+.social-meadia {
+  margin-top: em(43px);
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: em(30px) em(100px);
+    margin-top: em(30px);
+  }
+  li {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-column-gap: em(35px);
+    align-items: center;
+    i {
+      height: 32px;
+      width: 32px;
+      font-size: 19px;
+      background: $masala;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $white;
+    }
+  }
+}

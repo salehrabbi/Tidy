@@ -8,6 +8,11 @@ body {
     grid-template-rows: em(226px) minmax(calc(100vh - 33.625em), auto) em(312px);
   }
 }
+.influencer {
+  &-space {
+    padding: em(70px) em(53px);
+  }
+}
 
 // =========================== influencer global code
 .main-wraper {
@@ -17,6 +22,7 @@ body {
   grid-template-columns: max-content auto;
   border: 2px solid $silver;
   margin: em(50px) 0;
+  width: 100%;
 }
 .save-changes {
   border-top: 1px solid $silver;
@@ -63,6 +69,29 @@ label {
     width: 100%;
     padding: 0 em(30px);
   }
+  &.input-before-wraper {
+    input {
+      border-radius: 0 3px 3px 0;
+    }
+  }
+  .input-before {
+    border: 1px solid $silver;
+    border-right: 0;
+    width: 46px;
+    border-radius: 3px 0px 0px 3px;
+    font-size: em(25px);
+    font-weight: 700;
+  }
+}
+
+.input-texarea {
+  textarea {
+    border: 1px solid $silver;
+    border-radius: 3px;
+    width: 100%;
+    height: em(225px);
+    padding: em(20px);
+  }
 }
 
 .input-select {
@@ -102,5 +131,21 @@ label {
   }
   .bootstrap-select.show .dropdown-toggle::after {
     content: "\f106";
+  }
+}
+
+.input-img {
+  width: 141px;
+  height: 141px;
+  input {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+  }
+  img {
+    width: 141px;
+    height: 141px;
+    border-radius: 50%;
+    cursor: pointer;
   }
 }

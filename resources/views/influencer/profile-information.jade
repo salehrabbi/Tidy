@@ -1,1 +1,62 @@
-.profile-information
+
+extends ../layouts/app.jade
+
+block title
+  title Influencer - Profile Information
+
+block vars
+  - var bodyClass = 'influencer';
+
+block main
+  main.d-flex.justify-content-center.align-items-center 
+    .main-wraper
+      include ../partials/aside.jade
+      form(action="#")
+        .profile-information.influencer-space
+          .profile-avator
+            .input-img
+              label.d-inline-block(for="imgInp")
+                <input type='file' id="imgInp" />
+                <img id="blah" src="dist/images/avator.png" alt="your image" />
+            .avator-text
+              .title Username & profile picture
+              .description.mb-3 Please assign the profile picture amd username you would like shown on your social profile and your URL.
+              .avator-email
+                .input-text.d-flex.input-before-wraper
+                  .input-before.d-flex.align-items-center.justify-content-center @
+                  input(type="text")
+                button(type="submit") Claim  
+          .input-texarea
+            label(for="bio")
+              span Bio
+              <textarea id="bio" name="bio" cols="30" rows="10" placeholder="Please describe yourself and interests!"></textarea>
+          .social-meadia
+            label
+              span Social media
+            ul.list-unstyled.p-0.mb-0
+              li
+                <i class="fab fa-instagram"></i>
+                .input-text
+                  input(type="text" placeholder="Enter your Instagram..")
+              li
+                <i class="fab fa-youtube"></i>
+                .input-text
+                  input(type="text" placeholder="Enter your Youtube..") 
+              li
+                <i class="fab fa-facebook-f"></i>
+                .input-text
+                  input(type="text" placeholder="Enter your facebook..")
+              li
+                <i class="fab fa-linkedin-in"></i>
+                .input-text
+                  input(type="text" placeholder="Enter your LinkedIn..")  
+              li
+                <i class="fab fa-twitter"></i>
+                .input-text
+                  input(type="text" placeholder="Enter your Twitter..")  
+              li
+                <i class="fab fa-pinterest-p"></i>
+                .input-text
+                  input(type="text" placeholder="Enter your Pinterest..")                      
+        .save-changes.d-flex.justify-content-end.align-items-center
+          button(type="submit") Save changes           
