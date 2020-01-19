@@ -28,7 +28,7 @@ body {
   border: 2px solid $silver;
   margin: em(50px) 0;
   width: 100%;
-  min-height: em(1008px);
+  height: em(1008px);
 }
 .save-changes {
   border-top: 1px solid $silver;
@@ -66,6 +66,21 @@ label {
     margin-bottom: 5px;
   }
 }
+button {
+  border: none;
+  background: $jumbo;
+  font-size: em(20px);
+  font-family: $o;
+  letter-spacing: 0.02em;
+  color: $white;
+  border-radius: 5px;
+  transition: 0.3s;
+  width: calc-em(120, 20);
+  height: calc-em(50, 20);
+  &:hover {
+    background: $black;
+  }
+}
 .input-text {
   input {
     background: $white;
@@ -83,7 +98,7 @@ label {
   .input-before {
     border: 1px solid $silver;
     border-right: 0;
-    width: 46px;
+    width: 53px;
     border-radius: 3px 0px 0px 3px;
     font-size: em(25px);
     font-weight: 700;

@@ -22,19 +22,7 @@
       display: grid;
       grid-template-columns: 1fr em(120px);
       grid-column-gap: em(30px);
-      button {
-        border: none;
-        background: $jumbo;
-        font-size: em(20px);
-        font-family: $o;
-        letter-spacing: 0.02em;
-        color: $white;
-        border-radius: 5px;
-        transition: 0.3s;
-        &:hover {
-          background: $black;
-        }
-      }
+      max-width: em(600px);
     }
   }
 }
