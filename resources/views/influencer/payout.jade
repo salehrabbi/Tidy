@@ -1,0 +1,45 @@
+
+extends ../layouts/app.jade
+
+block title
+  title Influencer -  Payout - New
+
+block vars
+  - var bodyClass = 'influencer';
+
+block main
+  main.d-flex.justify-content-center.align-items-center 
+    .main-wraper
+      include ../partials/aside.jade
+      form.influencer-wraper(action="#")
+        .payout.influencer-space.pb-3(data-simplebar)
+          .account-balance.mb-3
+            .row.m-0
+              .col-4.p-0
+                .title Available Balance
+                .price £3,050
+                a.widthraw(href="#") Withdraw
+              .col-4.p-0
+                .title Pending Balance
+                .price £7,454  
+          label.mt-5.mb-2
+            span Activity    
+          .table-responsive 
+            table.table
+              - for(var x = 1; x<40; x++)
+                tr
+                  td.col-5 
+                    p.font-weight-bold Click
+                    p.m-0
+                      <i class="fas fa-tag mr-3"></i>
+                      span.font-weight-bold.text-decoration-underline Men’s Jeans
+                  td.col-4 
+                    p.font-weight-bold Date
+                    p.m-0 20/01/2020
+                  td.col-4 
+                    p.font-weight-bold Referrer/Source
+                    p.m-0 Instagram
+                  td.text-nowrap.price.vertical-align-middle + 10% ( £20 )
+
+        .save-changes.d-flex.justify-content-end.align-items-center
+          button(type="submit") Save changes           

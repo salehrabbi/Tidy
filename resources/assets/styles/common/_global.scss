@@ -11,7 +11,7 @@ body {
 .influencer {
   &-space {
     padding: em(70px) em(53px);
-    overflow: auto;
+    // overflow: auto;
   }
   &-wraper {
     display: grid;
@@ -66,6 +66,13 @@ label {
     font-family: $o;
     margin-bottom: 5px;
   }
+  p {
+    margin: 0;
+    font-family: $p;
+    font-size: em(13px);
+    color: $jumbo;
+    font-style: italic;
+  }
 }
 button,
 .button {
@@ -82,8 +89,11 @@ button,
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
   &:hover {
     background: $black;
+    color: $white;
+    text-decoration: none;
   }
 }
 .input-text {
@@ -193,4 +203,43 @@ button,
     color: $jumbo;
     font-weight: 700;
   }
+}
+
+.text-decoration {
+  &-underline {
+    text-decoration: underline !important;
+  }
+}
+.vertical-align {
+  &-middle {
+    vertical-align: middle !important;
+  }
+}
+// ================================= table
+.table {
+  font-family: $m;
+  .price {
+    font-size: em(20px);
+  }
+  td,
+  th {
+    border-top: 2px solid #dcddde;
+    padding: em(20px) 0;
+  }
+  tr {
+    &:first-child {
+      td,
+      th {
+        border-color: $black;
+      }
+    }
+  }
+}
+
+// ======================= scroll bar
+.simplebar-scrollbar::before {
+  background: $masala;
+  border-radius: 0;
+  left: 8px;
+  width: 4px;
 }

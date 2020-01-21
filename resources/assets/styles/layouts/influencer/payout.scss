@@ -1,0 +1,17 @@
+.account-balance {
+  font-family: $m;
+  .title {
+    font-size: em(18px);
+    font-weight: 700;
+  }
+  .price {
+    font-size: em(35px);
+    margin: calc-em(10, 35) 0;
+  }
+  .widthraw {
+    font-size: em(18px);
+    text-decoration-line: underline;
+    color: $masala;
+    font-weight: 700;
+  }
+}
