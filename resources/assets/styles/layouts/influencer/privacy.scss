@@ -1,0 +1,22 @@
+.privacy-page {
+  .instruction {
+    font-size: em(15px);
+    text-transform: uppercase;
+    font-family: $o;
+    letter-spacing: 0.02em;
+    color: $masala;
+    img {
+      margin: 0 3px;
+    }
+  }
+  .on-off {
+    display: grid;
+    grid-template-columns: max-content auto;
+    grid-column-gap: em(20px);
+    margin-bottom: em(20px);
+    p {
+      font-family: $m;
+      font-weight: 700;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+
+extends ../layouts/app.jade
+
+block title
+  title Influencer Privacy & Security - New
+
+block vars
+  - var bodyClass = 'influencer';
+
+block main
+  main.d-flex.justify-content-center.align-items-center 
+    .main-wraper
+      include ../partials/aside.jade
+      form.influencer-wraper(action="#")
+        .privacy-page.influencer-space.pb-3(data-simplebar)
+          each val in ['Profile', 'Communications','Profile', 'Communications']
+            .profile.mb-4
+              label
+                span.mb-4= val
+              .instruction.mb-3
+                span ON
+                img(src="dist/images/arrow.png" alt="")
+                span OFF  
+              .on-off
+                label.switch
+                  input(type='checkbox')
+                  span.slider.round
+                p.mb-0.mt-2 Some setting that controls privacy
+              .on-off
+                label.switch
+                  input(type='checkbox')
+                  span.slider.round
+                p.mb-0.mt-2 Some setting that controls privacy   
+              .on-off
+                label.switch
+                  input(type='checkbox')
+                  span.slider.round
+                p.mb-0.mt-2 Some setting that controls privacy but has a loger description  
+              .on-off
+                label.switch
+                  input(type='checkbox')
+                  span.slider.round
+                .mt-2  
+                  p.mb-2 Some setting that controls privacy
+                  p.small.mb-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dolor tellus, pharetra quis laoreet sed, suscipit nec diam. Praesent a mauris lorem. Etiam vel nisl eget augue iaculis sodales. Fusce eleifend scelerisque placerat. Integer in risus nec turpis faucibus fermentum. Nullam a tortor libero. Sed quis ipsum ac justo pulvinar eleifend. Nulla volutpat efficitur ultrices. Vivamus quam est, semper ac dignissim nec, hendrerit in ligula. Mauris in porta ante.
+
+        .save-changes.d-flex.justify-content-end.align-items-center
+          button(type="submit") Save changes           

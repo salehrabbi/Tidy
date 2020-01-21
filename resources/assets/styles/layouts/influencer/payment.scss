@@ -1,0 +1,16 @@
+.payment-page {
+  .account-ratio {
+    border-bottom: 2px solid $black;
+    padding-bottom: em(5px);
+    margin-bottom: em(30px);
+    .title {
+      display: grid;
+      grid-template-columns: max-content auto;
+    }
+  }
+  .add-account {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: em(49px);
+  }
+}

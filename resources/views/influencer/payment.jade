@@ -1,0 +1,48 @@
+
+extends ../layouts/app.jade
+
+block title
+  title Influencer Payment Information - New 
+
+block vars
+  - var bodyClass = 'influencer';
+
+block main
+  main.d-flex.justify-content-center.align-items-center 
+    .main-wraper
+      include ../partials/aside.jade
+      form.influencer-wraper(action="#")
+        .payment-page.influencer-space.pb-3
+          .account-ratio
+            .title.align-items-center
+              label
+                span Accounts
+              p.m-0.text-right.font-weight-bold Default 
+          - for(var x=1; x<5; x++)
+            label.input-radio
+              span Account Number: xxxxxx294
+              input(type='radio' checked='checked' name='radio')
+              .checkmark
+          .input-select.mt-5    
+            label(for="email-address") 
+              span.d-block Payment Fequency
+            .date-select(style="max-width: 200px")
+              select.selectpicker.form-control(title="Weekly")
+                - for(d=1; d<8; d++)
+                  option= d    
+            .small.mt-1 Rolling payments every 7 days  
+          label.mt-5.mb-3
+            span Add Account
+          .add-account
+            .input-text
+              label(for="add-number") 
+                span.d-block Account Number
+                input(type="text" id="add-number" value="3298738927983287382")   
+            .input-text
+              label(for="short-code") 
+                span.d-block Sort Code
+                input(type="text" id="short-code")   
+          .small.my-3.color-black TSB Bank LTD
+          a.button(href="#") Add             
+        .save-changes.d-flex.justify-content-end.align-items-center
+          button(type="submit") Save changes           

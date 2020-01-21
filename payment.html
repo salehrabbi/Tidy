@@ -8,7 +8,7 @@
     <meta name="description" content="description here">
     <meta name="keywords" content="keywords,here">
     <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
-    <title>Influencer - Your Details</title>
+    <title>Influencer Payment Information - New </title>
     <!-- Bootstrap--><link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,700&display=swap" rel="stylesheet"> 
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,500i,600,600i,700,700i&display=swap" rel="stylesheet">
@@ -37,29 +37,61 @@
           <div class="switch-buyer"><span>Switch to buyer account</span><i class="fas fa-sign-out-alt"></i>    </div>
         </aside>
         <form class="influencer-wraper" action="#">
-          <div class="contact influencer-space" style="grid-row: 1/-1;">
-            <div class="heading">
-              <h4>Contacting Baxter</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dolor tellus, pharetra quis laoreet sed, suscipit nec diam. Praesent a mauris lorem. Etiam vel nisl eget augue iaculis sodales. Fusce eleifend scelerisque placerat. Integer in risus nec turpis faucibus fermentum. Nullam a tortor libero. Sed quis ipsum ac justo pulvinar eleifend. Nulla volutpat efficitur ultrices. Vivamus quam est, semper ac dignissim nec, hendrerit in ligula. Mauris in porta ante.</p>
-            </div>
-            <div class="input pt-3 pb-5">
-              <label><span class="d-inline-block mb-2">By Chat</span>
-                <div class="button mt-4">Chat Now  </div>
-              </label>
-            </div>
-            <div class="ticket mt-4">
-              <label class="mb-3"><span class="m-0">Create a ticket</span></label>
-              <div class="input-text mb-4" style="max-width: 447px">
-                <label for="subject"><span>Subject</span>
-                  <input id="subject" type="text" value="3298738927983287382">
-                </label>
-              </div>
-              <div class="input-texarea pt-2">
-                <label for="message"><span>Message</span><textarea class="mb-2" id="message" name="bio" cols="30" rows="10" placeholder="Please describe yourself and interests!"></textarea>        
-                  <button class="mt-4" type="submit">Create</button>
-                </label>
+          <div class="payment-page influencer-space pb-3">
+            <div class="account-ratio">
+              <div class="title align-items-center">
+                <label><span>Accounts</span></label>
+                <p class="m-0 text-right font-weight-bold">Default </p>
               </div>
             </div>
+            <label class="input-radio"><span>Account Number: xxxxxx294</span>
+              <input type="radio" checked="checked" name="radio">
+              <div class="checkmark"></div>
+            </label>
+            <label class="input-radio"><span>Account Number: xxxxxx294</span>
+              <input type="radio" checked="checked" name="radio">
+              <div class="checkmark"></div>
+            </label>
+            <label class="input-radio"><span>Account Number: xxxxxx294</span>
+              <input type="radio" checked="checked" name="radio">
+              <div class="checkmark"></div>
+            </label>
+            <label class="input-radio"><span>Account Number: xxxxxx294</span>
+              <input type="radio" checked="checked" name="radio">
+              <div class="checkmark"></div>
+            </label>
+            <div class="input-select mt-5">   
+              <label for="email-address"> <span class="d-block">Payment Fequency</span></label>
+              <div class="date-select" style="max-width: 200px">
+                <select class="selectpicker form-control" title="Weekly">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                </select>
+              </div>
+              <div class="small mt-1">Rolling payments every 7 days  </div>
+            </div>
+            <label class="mt-5 mb-3"><span>Add Account</span></label>
+            <div class="add-account">
+              <div class="input-text">
+                <label for="add-number"> <span class="d-block">Account Number</span>
+                  <input type="text" id="add-number" value="3298738927983287382">
+                </label>
+              </div>
+              <div class="input-text">
+                <label for="short-code"> <span class="d-block">Sort Code</span>
+                  <input type="text" id="short-code">
+                </label>
+              </div>
+            </div>
+            <div class="small my-3 color-black">TSB Bank LTD</div><a class="button" href="#">Add             </a>
+          </div>
+          <div class="save-changes d-flex justify-content-end align-items-center">
+            <button type="submit">Save changes           </button>
           </div>
         </form>
       </div>
