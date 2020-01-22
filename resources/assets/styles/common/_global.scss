@@ -24,7 +24,7 @@ body {
   &-wraper {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 906px em(100px);
+    grid-template-rows: calc(95vh - 6.25em) em(100px);
   }
 }
 
@@ -37,7 +37,7 @@ body {
   border: 2px solid $silver;
   margin: em(50px) 0;
   width: 100%;
-  height: em(1008px);
+  height: 95vh;
   overflow: hidden;
   position: relative;
 }
