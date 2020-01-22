@@ -30,10 +30,14 @@ body {
   margin: em(50px) 0;
   width: 100%;
   height: em(1008px);
+  overflow: hidden;
 }
 .save-changes {
   border-top: 1px solid $silver;
   padding: em(24px) em(38px);
+  background: $white;
+  position: relative;
+  z-index: 2;
   button {
     background: $black;
     border-radius: 5px;
@@ -171,6 +175,9 @@ button,
   .bootstrap-select.show .dropdown-toggle::after {
     content: "\f106";
   }
+}
+.bootstrap-select .dropdown-menu {
+  max-height: 300px;
 }
 
 .input-img {
