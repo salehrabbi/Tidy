@@ -266,6 +266,9 @@ button,
     &:first-child {
       border-top-color: $black;
     }
+    &:last-child {
+      border-bottom: 2px solid #dcddde;
+    }
   }
 }
 
