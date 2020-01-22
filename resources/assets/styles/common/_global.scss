@@ -249,25 +249,22 @@ button,
   font-weight: 700;
 }
 // ================================= table
-.table {
+.history-list {
   font-family: $m;
-  @include md {
-    width: 600px;
-  }
   .price {
-    font-size: em(20px);
+    color: #34a853;
   }
-  td,
-  th {
+  li {
     border-top: 2px solid #dcddde;
-    padding: em(20px) 0;
-  }
-  tr {
+    padding: em(17px) 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr max-content;
+    @include lg {
+      grid-template-columns: 1fr max-content;
+      grid-row-gap: em(30px);
+    }
     &:first-child {
-      td,
-      th {
-        border-color: $black;
-      }
+      border-top-color: $black;
     }
   }
 }
