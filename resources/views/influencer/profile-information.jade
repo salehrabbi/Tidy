@@ -12,7 +12,7 @@ block main
     .main-wraper
       include ../partials/aside.jade
       form.influencer-wraper(action="#")
-        .profile-information.influencer-space.overflow-hidden
+        .profile-information.influencer-space(data-simplebar)
           .profile-avator
             .input-img
               label.d-inline-block(for="imgInp")
@@ -22,7 +22,7 @@ block main
               .title Username & profile picture
               .description.mb-3 Please assign the profile picture amd username you would like shown on your social profile and your URL.
               .avator-email
-                .input-text.d-flex.input-before-wraper
+                .input-text.input-before-wraper
                   .input-before.d-flex.align-items-center.justify-content-center @
                   input(type="text")
                 button(type="submit") Claim  

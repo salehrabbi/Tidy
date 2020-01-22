@@ -13,3 +13,7 @@ function readURL(input) {
 $("#imgInp").change(function() {
   readURL(this);
 });
+
+$(".tigger").click(function() {
+  $(".tab-menu").toggleClass("active");
+});

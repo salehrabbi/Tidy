@@ -5,6 +5,13 @@
     grid-column-gap: em(63px);
     align-items: center;
     margin-bottom: em(37px);
+    @include lg {
+      grid-template-columns: 1fr;
+      justify-content: center;
+      .input-img {
+        margin: 0 auto;
+      }
+    }
   }
   .avator-text {
     .title {
@@ -23,6 +30,10 @@
       grid-template-columns: 1fr em(120px);
       grid-column-gap: em(30px);
       max-width: em(600px);
+      @include md {
+        grid-template-columns: 1fr;
+        grid-row-gap: 20px;
+      }
     }
   }
 }
@@ -34,12 +45,18 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: em(30px) em(100px);
     margin-top: em(30px);
+    @include lg {
+      grid-template-columns: 1fr;
+    }
   }
   li {
     display: grid;
     grid-template-columns: max-content 1fr;
     grid-column-gap: em(35px);
     align-items: center;
+    @include sm {
+      grid-column-gap: 15px;
+    }
     i {
       height: 32px;
       width: 32px;

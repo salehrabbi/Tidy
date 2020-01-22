@@ -3,5 +3,12 @@
     display: grid;
     grid-template-columns: 1fr max-content max-content;
     grid-column-gap: em(22px);
+    @include lg {
+      display: flex;
+      flex-flow: row wrap;
+      input {
+        margin-bottom: 20px;
+      }
+    }
   }
 }

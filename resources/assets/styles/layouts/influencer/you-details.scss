@@ -3,6 +3,9 @@
   grid-template-columns: 1fr 1fr;
   grid-column-gap: em(49px);
   grid-row-gap: em(40px);
+  @include lg {
+    grid-template-columns: 1fr;
+  }
   .phone-number {
     display: grid;
     grid-template-columns: em(107px) 1fr;
@@ -12,6 +15,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, em(200px));
     grid-column-gap: em(33px);
+    grid-row-gap: em(20px);
   }
   .input-select.full-column {
     grid-column: 1/-1;

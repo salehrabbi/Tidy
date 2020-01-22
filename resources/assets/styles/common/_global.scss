@@ -6,17 +6,25 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: em(226px) minmax(calc(100vh - 33.625em), auto) em(312px);
+    @include xl {
+      display: block;
+    }
   }
 }
 .influencer {
   &-space {
     padding: em(70px) em(53px);
-    // overflow: auto;
+    @include md {
+      padding: 30px;
+    }
+    @include sm {
+      padding: 20px 15px;
+    }
   }
   &-wraper {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: em(904px) em(100px);
+    grid-template-rows: 906px em(100px);
   }
 }
 
@@ -31,6 +39,7 @@ body {
   width: 100%;
   height: em(1008px);
   overflow: hidden;
+  position: relative;
 }
 .save-changes {
   border-top: 1px solid $silver;
@@ -94,6 +103,9 @@ button,
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  @include sm {
+    width: 5.333em;
+  }
   &:hover {
     background: $black;
     color: $white;
@@ -111,6 +123,8 @@ button,
     color: $masala;
   }
   &.input-before-wraper {
+    display: grid;
+    grid-template-columns: max-content auto;
     input {
       border-radius: 0 3px 3px 0;
     }
@@ -118,7 +132,7 @@ button,
   .input-before {
     border: 1px solid $silver;
     border-right: 0;
-    width: 53px;
+    width: 50px;
     border-radius: 3px 0px 0px 3px;
     font-size: em(25px);
     font-weight: 700;
@@ -232,6 +246,9 @@ button,
 // ================================= table
 .table {
   font-family: $m;
+  @include md {
+    width: 600px;
+  }
   .price {
     font-size: em(20px);
   }

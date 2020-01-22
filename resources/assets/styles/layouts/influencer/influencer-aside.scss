@@ -31,3 +31,45 @@
     }
   }
 }
+
+// ============================ aside mobile
+@include xl {
+  .aside-mobile {
+    border-right: 1px solid $silver;
+    padding: 22px;
+    @include sm {
+      padding: 15px 10px;
+    }
+    i {
+      font-size: 32px;
+      cursor: pointer;
+    }
+  }
+  .mobile-tigger {
+    font-size: 32px;
+    position: absolute;
+    top: 22px;
+    left: 22px;
+    cursor: pointer;
+  }
+  .tab-menu {
+    position: absolute;
+    height: 100%;
+    left: -100%;
+    background: $white;
+    z-index: 999;
+    transition: 0.5s;
+    .nav-tabs {
+      padding-top: 50px;
+    }
+    &.active {
+      left: 0;
+    }
+  }
+}
+.tab-menu {
+  @include sm {
+    min-width: auto;
+    left: -110%;
+  }
+}
