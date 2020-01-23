@@ -16,6 +16,11 @@ body {
     }
   }
 }
+@include rmd(1366) {
+  .container {
+    max-width: 1446px;
+  }
+}
 .influencer {
   &-space {
     padding: em(70px) em(53px);
@@ -52,7 +57,8 @@ body {
   background: $white;
   position: relative;
   z-index: 2;
-  button {
+  button,
+  .button {
     background: $black;
     border-radius: 5px;
     min-width: calc-em(190, 20);
@@ -62,6 +68,13 @@ body {
     font-family: $o;
     font-size: em(20px);
     letter-spacing: 0.002em;
+    border: 1px solid $black;
+  }
+  &.go-back {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    border-top: 2px solid $black;
+    padding-top: em(37px);
   }
 }
 .switch-buyer {
@@ -214,6 +227,33 @@ button,
     cursor: pointer;
   }
 }
+
+.input-checkbox {
+  .check-mark {
+    border-radius: 3px;
+    height: 20px;
+    width: 20px;
+    background: #dcddde;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  input {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+  }
+  input:checked ~ .check-mark {
+    &:before {
+      font-family: "Font Awesome 5 Pro";
+      font-weight: 900;
+      content: "\f00c";
+      font-size: 13px;
+      color: #30363d;
+    }
+  }
+}
+
 // ============================ .heading
 .heading {
   h4 {
@@ -382,6 +422,19 @@ input:checked + .slider:before {
 // ====================== color
 .color {
   &-black {
-    color: $black;
+    color: $black !important;
+  }
+}
+.font {
+  &-normal {
+    font-style: normal !important;
+  }
+}
+.background {
+  &-white {
+    background: #fff !important;
+  }
+  &-none {
+    background: none !important;
   }
 }

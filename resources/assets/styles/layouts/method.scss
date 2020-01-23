@@ -1,0 +1,18 @@
+.method-page {
+  padding: em(140px) 0;
+  .check {
+    display: grid;
+    grid-template-columns: max-content auto;
+    align-items: center;
+    grid-column-gap: em(30px);
+    margin-bottom: em(14px);
+    .title {
+      font-size: em(15px);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .small {
+      font-family: $f;
+    }
+  }
+}
