@@ -434,6 +434,9 @@ input:checked + .slider:before {
   &-white {
     background: #fff !important;
   }
+  &-black {
+    background: $black !important;
+  }
   &-none {
     background: none !important;
   }

@@ -1,0 +1,22 @@
+.your-information-page {
+  padding: em(170px) 0;
+  .date-select {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: em(30px);
+  }
+  .locations {
+    .d-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: em(45px);
+    }
+  }
+  .current-locations {
+    .d-grid {
+      display: grid;
+      grid-template-columns: 1fr max-content max-content;
+      grid-column-gap: em(30px);
+    }
+  }
+}
