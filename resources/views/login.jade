@@ -1,0 +1,82 @@
+extends layouts/app.jade
+
+block title
+  title Login
+
+block vars
+  - var bodyClass = 'background-white';  
+
+block main
+  main.login-page
+    .container.container-1735
+      .form-wraprer
+        .login
+          form(action="#")
+            label.mb-5
+              span.mb-0 LOGIN
+            .input-text.mb-4
+              label(for="email")
+                span.light Email Address*
+                input#email(type="text")  
+            .input-text.mb-4
+              label(for="password")
+                span.light Password*
+                input#password(type="text")   
+            fieldset#login-group.align-items-center 
+              label.input-radio.dot.mb-0
+                span.pl-4.ml-3.light.mb-0 Keep me logged in 
+                  .info.d-inline What is this?
+                input(type='radio' checked='checked' name='radio')  
+                .checkmark    
+              a.info(href="#") Forgot your password?   
+            button.background-black.w-100.ff-Montserrat.font-weight-bold.mt-5(type="submit" style="max-width: 350px") Login  
+              <i class="fas fa-lock"></i>
+          .login-with.mt-5.pt-5
+            a.button.w-100.ff-Montserrat.font-weight-bold.px-4.justify-content-start(type="submit" style="background: #3B5998;" href="#") Log in with Facebook  
+              img(src="dist/images/facebook.png" alt="")
+            button.w-100.ff-Montserrat.font-weight-bold.color-black.px-4.justify-content-start(type="submit" style="background: #DCDDDE;") Log in with Google  
+              img(src="dist/images/google.png" alt="")
+        .register
+          form(action="#")
+            label.mb-5
+              span.mb-0 REGISTER
+            .form-group
+              .input-text.mb-4
+                label(for="name")
+                  span.light First Name*
+                  input#name(type="text")  
+              .input-text.mb-4
+                label(for="surname")
+                  span.light Surname*
+                  input#surname(type="text")
+              .input-text.mb-4.full-column
+                label(for="Email")
+                  span.light Email Address*
+                  input#Email(type="text")      
+              .input-text.mb-4
+                label(for="password")
+                  span.light Password*
+                  input#password(type="text")      
+              .input-text.mb-4
+                label(for="c-password")
+                  span.light Confirm Password*
+                  input#c-password(type="text")   
+              label.input-radio.dot.mb-4.full-column 
+                span.pl-4.ml-3.light.mb-0 Continue as normal user
+                input(type='radio' checked='checked' name='radio')  
+                .checkmark     
+              label.input-radio.dot.mb-4
+                span.pl-4.ml-3.light.mb-0 I am an influencer
+                input(type='radio' checked='checked' name='radio')  
+                .checkmark    
+              label.input-radio.dot.mb-4
+                span.pl-4.ml-3.light.mb-0 I’m looking to sell my products
+                input(type='radio' checked='checked' name='radio')  
+                .checkmark     
+              p.full-column.mb-0 By registering you agree to our BAXTER Account 
+                a.color-black.text-decoration-underline(href="#") Terms and Conditions 
+                | and 
+                a.color-black.text-decoration-underline(href="#") Privacy Policy.                     
+              button.background-black.w-100.ff-Montserrat.font-weight-bold.mt-4.full-column(type="submit" style="max-width: 350px") Register  
+                <i class="fas fa-lock"></i>
+

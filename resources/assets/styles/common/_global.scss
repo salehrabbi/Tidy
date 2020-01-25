@@ -19,6 +19,9 @@ body {
 @include rmd(1366) {
   .container {
     max-width: 1446px;
+    &-1735 {
+      max-width: 1735px;
+    }
   }
 }
 .influencer {
@@ -96,6 +99,10 @@ label {
     letter-spacing: 0.002em;
     font-family: $o;
     margin-bottom: 5px;
+    &.light {
+      font-family: $m;
+      font-size: em(20px);
+    }
   }
   p {
     margin: 0;
@@ -121,6 +128,7 @@ button,
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  position: relative;
   @include sm {
     width: 5.333em;
   }
@@ -128,6 +136,12 @@ button,
     background: $black;
     color: $white;
     text-decoration: none;
+  }
+  i,
+  img {
+    position: absolute;
+    right: 0;
+    right: 15px;
   }
 }
 .input-text {
@@ -419,6 +433,37 @@ input:checked + .slider:before {
 .input-radio input:checked ~ .checkmark {
   background-color: $masala;
 }
+.input-radio.dot input:checked ~ .checkmark {
+  background: #878787;
+  &:after {
+    background: #000;
+  }
+}
+.dot {
+  .checkmark {
+    height: 20px;
+    width: 20px;
+    background: #878787;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: auto;
+    left: 0;
+    top: 4px;
+    &:after {
+      content: "";
+      height: 10px;
+      width: 10px;
+      background: none;
+      display: block;
+      border-radius: 50%;
+    }
+  }
+}
+.info {
+  color: #878787;
+  text-decoration: underline;
+}
 // ====================== color
 .color {
   &-black {
@@ -439,5 +484,11 @@ input:checked + .slider:before {
   }
   &-none {
     background: none !important;
+  }
+}
+
+.ff {
+  &-Montserrat {
+    font-family: $m !important;
   }
 }

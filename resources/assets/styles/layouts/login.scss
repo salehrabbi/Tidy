@@ -1,0 +1,56 @@
+.login-page {
+  padding: em(100px) 0;
+  .form-wraprer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .login {
+    position: relative;
+    padding-right: em(130px);
+    @include rwd(1366) {
+      padding-right: em(70px);
+    }
+    fieldset {
+      display: grid;
+      grid-template-columns: 1fr max-content;
+    }
+    &:after {
+      content: "";
+      width: 1px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 2;
+      background: linear-gradient(
+        180deg,
+        rgba(196, 196, 196, 0) 0%,
+        #c4c4c4 15.1%,
+        #c4c4c4 43.75%,
+        #c4c4c4 81.25%,
+        rgba(196, 196, 196, 0) 100%
+      );
+    }
+  }
+  .login-with {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(316px, 1fr));
+    grid-column-gap: em(30px);
+    border-top: 1px solid#C4C4C4;
+    grid-row-gap: em(30px);
+  }
+  .register {
+    padding-left: em(130px);
+    @include rwd(1366) {
+      padding-left: em(70px);
+    }
+    .form-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: em(25px);
+      .full-column {
+        grid-column: 1/-1;
+      }
+    }
+  }
+}
