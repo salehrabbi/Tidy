@@ -41,6 +41,9 @@
       border-bottom: 2px solid #878787;
     }
     .product {
+      button i {
+        top: 12px;
+      }
       .product-detailes {
         display: grid;
         grid-template-columns: em(291px) auto;
