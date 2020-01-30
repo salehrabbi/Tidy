@@ -11,30 +11,50 @@
       background: #e3e3e3;
       border-radius: 5px 5px 0px 0px;
       padding: em(24px);
+      i {
+        position: absolute;
+        right: 10px;
+        top: 23px;
+        color: #c4c4c4;
+      }
       .title {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         font-size: em(18px);
+        @include lg {
+          grid-template-columns: 1fr;
+        }
       }
     }
     .card {
+      border: none;
       border-top: 1px solid $silver;
       border-radius: 0;
       display: grid;
       grid-template-columns: 1fr max-content;
       grid-column-gap: em(100px);
+      @include lg {
+        grid-template-columns: 1fr;
+      }
     }
     .border-bottom {
-      border-bottom: 1px solid #878787;
+      border-bottom: 2px solid #878787;
     }
     .product {
       .product-detailes {
         display: grid;
         grid-template-columns: em(291px) auto;
         grid-column-gap: em(30px);
+        @include md {
+          grid-template-columns: 1fr;
+          grid-row-gap: 30px;
+        }
         .text {
           display: grid;
           grid-template-columns: 1fr 1fr;
+          @include sm {
+            grid-template-columns: 1fr;
+          }
           .title {
             margin-bottom: calc-em(25, 22);
             font-size: em(22px);
@@ -53,6 +73,24 @@
         grid-template-columns: repeat(4, 1fr);
         position: relative;
         margin-top: 30px;
+        @include sm {
+          display: none;
+        }
+        &.mobile {
+          .step {
+            &:before {
+              display: inline-block;
+              margin: 0;
+              margin-right: 15px;
+              position: relative;
+              bottom: -4px;
+            }
+          }
+        }
+
+        @include md {
+          font-size: 11px;
+        }
         &:before {
           content: "";
           border-top: 2px solid #32cda3;
@@ -62,6 +100,9 @@
           margin: 0 auto;
           left: 0;
           right: 0;
+          @include sm {
+            display: none;
+          }
         }
         .step {
           font-size: em(20px);
@@ -79,6 +120,9 @@
       }
     }
     .tracking {
+      @include lg {
+        display: none;
+      }
       .button {
         min-width: 263px;
         margin-bottom: 42px;

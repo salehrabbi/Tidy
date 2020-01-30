@@ -11,23 +11,38 @@ block main
     .container
       each val in [1, 2, 3]
         .item
-          .tigger(data-toggle='collapse' data-target='#collapse-'+val aria-expanded='false' aria-controls='collapse-'+val)
+          .tigger.position-relative(data-toggle='collapse' data-target='#collapse-'+val aria-expanded='false' aria-controls='collapse-'+val)
             .title
               .text 
                 b Merchant: 
                 |  Merchant name here
-              .text.text-center 
+              .text.text-lg-center 
                 b Product ID:
                 |  485WH182 
-              .text.text-right 
+              .text.text-lg-right.pr-lg-4 
                 b Order Number: 
                 |  495869438   
+            <i class="fas fa-ellipsis-v"></i>    
           .collapse(id='collapse-'+val)
             .card.card-body
               .product
-                .product-detailes
+                .dropdown.d-lg-none.w-100
+                  button#dropdownMenuButton.dropdown-toggle.w-100.background-black.mb-4(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                    | Manage Order
+                    <i class="fas fa-ellipsis-v"></i>
+                  .dropdown-menu.w-100(aria-labelledby='dropdownMenuButton')
+                    .small.dropdown-item.background-none.text-uppercase manage
+                    a.dropdown-item(href='#') Track package
+                    a.dropdown-item(href='#') Invoice
+                    a.dropdown-item(href='#') Return Item
+                    a.dropdown-item(href='#') Problem with order
+                    a.dropdown-item(href='#') Rate seller
+
+                .product-detailes.w-100
                   .img
                     img.w-100(src="dist/images/product.png" alt="")
+                  .process.w-100.d-block.d-sm-none.mobile.m-0
+                    .step Reviewing  
                   .text
                     .wraper
                       .title
@@ -49,13 +64,12 @@ block main
                       .title.border-bottom.pb-4
                         b Shipping Cost: 
                         span  £15 
-                      .title
+                      .title.mb-0
                         b Total Cost: 
                         span  £600 
-                .process
+                .process.w-100
                   each val in ['Reviewing','Preparing order','Shipped','Delivered']
                     .step.text-center= val
-
               .tracking
                 a.button.active.text-nowrap.only-border(href="#") Track package 
                 a.button.text-nowrap.only-border(href="#") Invoice 
