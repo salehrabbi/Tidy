@@ -11,7 +11,7 @@ block main
     .container
       each val in ['Domestic', 'European']
         .item(style="max-width: 1153px")
-          label.mb-2.pl-5
+          label.mb-2.pl-sm-5
             span= val
           form(action="#")
             - for (var x=0; x<4; x++)
@@ -24,6 +24,6 @@ block main
                   .small.color-black.font-weight-normal.font-normal Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisis gravida enim eu gravida quam nec lectus condimentum. Lectus viverra est porta platea adipiscing dignissim non pulvinar. Viverra ut volutpat scelerisque leo non purus ac, at. Nisi libero viverra ut dui a, neque neque enim maecenas. 
       .save-changes.px-0.pb-0.go-back.mt-4
         button.background-none.color-black 
-          img.mr-4(src="dist/images/arrow-left.png" alt="")
+          img.mr-4.position-static(src="dist/images/arrow-left.png" alt="")
           span Go back
         button Save changes

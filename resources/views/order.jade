@@ -1,0 +1,74 @@
+extends layouts/app.jade
+
+block title
+  title Order
+
+block vars
+  - var bodyClass = 'background-white';  
+
+block main
+  main.order-page
+    .container
+      each val in [1, 2, 3]
+        .item
+          .tigger(data-toggle='collapse' data-target='#collapse-'+val aria-expanded='false' aria-controls='collapse-'+val)
+            .title
+              .text 
+                b Merchant: 
+                |  Merchant name here
+              .text.text-center 
+                b Product ID:
+                |  485WH182 
+              .text.text-right 
+                b Order Number: 
+                |  495869438   
+          .collapse(id='collapse-'+val)
+            .card.card-body
+              .product
+                .product-detailes
+                  .img
+                    img.w-100(src="dist/images/product.png" alt="")
+                  .text
+                    .wraper
+                      .title
+                        b.d-block.normal BRAND NAME
+                        span.big Product name  
+                      .title
+                        b.d-block.normal Order Date
+                        span.big 22-10-2019
+                      .title
+                        b.d-block.normal Delivery Date
+                        span.big 24-10-2019
+                      .title
+                        b.d-xl-inline-block.d-block Return Before: 
+                        span  7-11-2019 
+                    .wraper    
+                      .title
+                        b Item Cost: 
+                        span  £585  
+                      .title.border-bottom.pb-4
+                        b Shipping Cost: 
+                        span  £15 
+                      .title
+                        b Total Cost: 
+                        span  £600 
+                .process
+                  each val in ['Reviewing','Preparing order','Shipped','Delivered']
+                    .step.text-center= val
+
+              .tracking
+                a.button.active.text-nowrap.only-border(href="#") Track package 
+                a.button.text-nowrap.only-border(href="#") Invoice 
+                a.button.text-nowrap.only-border(href="#") Return item
+                a.button.text-nowrap.only-border(href="#") Problem with order
+                a.button.text-nowrap.only-border.mb-0(href="#") Rate Seller
+
+      <ul class="pagination mb-0 align-items-center pt-3">
+        <li><a href="#"><i class="fas fa-angle-left"></i></a></li>
+        <li><a href="#" class="color-black">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#"><i class="fas fa-angle-right"></i></a></li>
+      </ul>

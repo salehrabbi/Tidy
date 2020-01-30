@@ -1,5 +1,21 @@
 .your-information-page {
   padding: em(170px) 0;
+  @include md {
+    padding: 100px 0;
+  }
+  .profile-avator {
+    grid-template-columns: 1fr max-content;
+    @include sm {
+      grid-template-columns: 1fr;
+      grid-row-gap: 10px;
+      .input-img {
+        order: 1;
+      }
+      .avator-text {
+        order: 2;
+      }
+    }
+  }
   .date-select {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -10,6 +26,9 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-column-gap: em(45px);
+      @include sm {
+        grid-column-gap: 10px;
+      }
     }
   }
   .current-locations {
@@ -17,6 +36,9 @@
       display: grid;
       grid-template-columns: 1fr max-content max-content;
       grid-column-gap: em(30px);
+      @include sm {
+        grid-column-gap: 10px;
+      }
     }
   }
 }
