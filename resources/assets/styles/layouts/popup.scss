@@ -24,7 +24,7 @@
 .modal-content .close {
   margin: 0;
   position: absolute;
-  right: 0;
+  right: 10px;
   top: 0;
   cursor: pointer;
 }
@@ -233,9 +233,9 @@
       text-decoration: none;
       border-bottom: 2px solid #e3e3e3;
       &.hover:hover {
-        background: #878787;
-        color: #fff;
-        border-color: #878787;
+        background: #f3f3f3;
+        color: #000000;
+        border-color: #e3e3e3;
       }
     }
   }
