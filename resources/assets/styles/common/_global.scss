@@ -486,6 +486,9 @@ input:checked + .slider:before {
   &-black {
     color: $black !important;
   }
+  &-red {
+    color: #e20303 !important;
+  }
 }
 .font {
   &-normal {
@@ -532,7 +535,7 @@ input:checked + .slider:before {
   }
 }
 // =================== .dropdown
-.dropdown {
+.product .dropdown {
   .small {
     font-size: 14px;
     color: #b2b3b6;
@@ -548,6 +551,6 @@ input:checked + .slider:before {
     }
   }
 }
-.dropdown-toggle::after {
+.product .dropdown .dropdown-toggle::after {
   display: none;
 }

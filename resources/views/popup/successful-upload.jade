@@ -1,0 +1,28 @@
+button.btn.btn-primary.w-100.mt-4(type='button' data-toggle='modal' data-target='#successful-photo')
+  | Successful upload 
+#successful-photo.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true')
+  .modal-dialog(role='document')
+    .modal-content
+      .modal-header.justify-content-center.py-4
+        h5.modal-title Successful upload!
+        .close(data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') ×
+      .modal-body.p-0
+        form.successful-photo-popup
+          .left-image-upload.p-4
+            .img
+              img.w-100(src="dist/images/popup-upload.png" alt="")
+            .text
+              .title.my-3 Copy the link below and share the photo to create sales!
+            .link-copy.d-flex.align-items-center.px-2.mb-3
+              input.w-100(type="text" value="www.baxterfashion.com/user/username/photos/pic1")
+              <i class="fas fa-link pl-3"></i>
+            .d-flex.align-items-center.mb-3
+              span.text-nowrap.mr-2.font-weight-bold Short url
+              .link-copy.px-2.d-flex.align-items-center.w-100
+                input.w-100(type="text" value="www.baxterfashion.com/user/username/photos/pic1")
+                <i class="fas fa-link pl-3"></i>
+            .text-center
+              a.share-photo(href="#") 
+                <i class="fas fa-share-square"></i>
+                |  Share this photo  

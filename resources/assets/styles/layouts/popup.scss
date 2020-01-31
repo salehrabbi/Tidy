@@ -1,0 +1,260 @@
+.modal-dialog {
+  max-width: 80vw;
+  max-width: 1151px;
+}
+.modal-open .modal {
+  display: flex !important;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+.modal-header .close {
+  font-size: 2.5rem;
+}
+
+.modal-header {
+  border-bottom: 2px solid #e3e3e3;
+}
+
+.modal-title {
+  font-size: 15px;
+  font-weight: 700;
+  font-family: $m;
+}
+.modal-content .close {
+  margin: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+
+// ==================================== .upload-photo-popup
+.upload-photo-popup {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  @include lg {
+    grid-template-columns: 1fr;
+  }
+  .left-image-upload {
+    border-right: 2px solid #e3e3e3;
+    textarea {
+      width: 100%;
+      height: 60px;
+      border: none;
+      font-size: 10px;
+    }
+  }
+  .title {
+    font-weight: 700;
+    font-family: $m;
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+  .right-upload-form {
+    .input-select .bootstrap-select > .dropdown-toggle {
+      font-size: 13px;
+    }
+    .button {
+      height: 40px;
+      padding: 5px 30px;
+      width: auto;
+      display: inline-flex;
+    }
+
+    .check-box {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 30px;
+      @include sm {
+        grid-template-columns: 1fr;
+        grid-row-gap: 10px;
+      }
+      .check {
+        .check-mark {
+          width: 100%;
+          font-size: 18px;
+          height: 40px;
+          background: none;
+          border: 1px solid #878787;
+          color: #878787;
+          font-family: $o;
+          cursor: pointer;
+        }
+        input:checked ~ .check-mark {
+          background: #000;
+          border-color: #000;
+          color: #fff;
+        }
+      }
+    }
+    .input-text {
+      font-size: 13px;
+    }
+    .category {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 30px;
+      @include sm {
+        grid-template-columns: 1fr;
+        grid-row-gap: 10px;
+      }
+    }
+  }
+}
+.tags {
+  border-top: 2px solid #e3e3e3;
+  border-bottom: 2px solid #e3e3e3;
+}
+// ================================================ successful-upload.jade
+.successful-photo-popup {
+  font-size: 13px;
+  .title {
+    font-weight: 700;
+    font-family: $m;
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+  .link-copy {
+    height: 30px;
+    background: #000;
+    border-radius: 5px;
+    color: #fff;
+    input {
+      border: none;
+      background: none;
+      color: #fff;
+    }
+  }
+  .share-photo {
+    font-size: 13px;
+    font-weight: 700;
+    color: #000;
+  }
+}
+// ====================================== .open-photo-popup
+.popup-avator {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  .button {
+    border: 2px solid #818285;
+    height: 25px;
+    background: none;
+    font-weight: 700;
+    color: #818285;
+    font-family: $m;
+    font-size: 14px;
+    width: auto;
+    display: inline-flex;
+  }
+}
+.open-photo-popup {
+  .title {
+    font-weight: 700;
+    font-family: $m;
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+  p {
+    font-size: 10px;
+  }
+  .tags {
+    span {
+      font-size: 13px;
+    }
+  }
+  .dropdown {
+    position: absolute;
+    right: 24px;
+    top: 23px;
+    font-size: 21px;
+    cursor: pointer;
+    @include sm {
+      right: 14px;
+      top: 17px;
+    }
+    i {
+      color: #878787;
+    }
+  }
+  .dropdown-toggle::after {
+    display: none;
+  }
+  .like-share {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    a {
+      font-size: 13px;
+      font-weight: 700;
+      color: #000;
+      i {
+        color: #878787;
+        font-size: 18px;
+      }
+      .fa-share-square {
+        color: #000;
+      }
+    }
+  }
+  .navigation-arrow {
+    a {
+      width: 50px;
+      height: 50px;
+      background: #ffffff;
+      display: flex;
+      border-radius: 50%;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      position: absolute;
+      top: 50%;
+      left: -90px;
+      margin-top: -25px;
+      color: #000;
+      font-size: 30px;
+      &.right {
+        left: auto;
+        right: -90px;
+      }
+    }
+  }
+}
+// ============================== .report
+.report {
+  li {
+    text-align: center;
+    padding: 13px;
+    border-bottom: 2px solid #e3e3e3;
+    a {
+      font-size: 15px;
+      color: #000000;
+    }
+  }
+  &.share {
+    li {
+      position: relative;
+    }
+    i {
+      height: 18px;
+      width: 18px;
+      background: #878787;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 10px;
+      border-radius: 50%;
+      position: absolute;
+      right: 100px;
+      top: 18px;
+      @include sm {
+        right: 50px;
+      }
+      &.fa-link {
+        background: none;
+        font-size: 18px;
+        color: #878787;
+      }
+    }
+  }
+}

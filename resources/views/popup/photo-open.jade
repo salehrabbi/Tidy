@@ -1,0 +1,56 @@
+button.btn.btn-primary.w-100.mt-4(type='button' data-toggle='modal' data-target='#open-photo')
+  | photo open
+#open-photo.modal.fade.open-photo-popup(tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true')
+  .modal-dialog(role='document' style="max-width: 544px;")
+    .modal-content
+      .modal-header.py-3.d-block
+        .popup-avator
+          h5.modal-title 
+            img.mr-3(src="dist/images/popup-avator.png" alt="")
+            | USERNAME
+          .follow.d-flex.align-items-center.justify-content-end.mr-5
+            .button.px-4 Follow  
+        .dropdown
+          #dropdownMenuButton.dropdown-toggle(data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+            <i class="fas fa-ellipsis-v"></i>
+          .dropdown-menu(aria-labelledby='dropdownMenuButton')
+            a.dropdown-item(href='#') Track package
+            a.dropdown-item(href='#') Invoice
+            a.dropdown-item(href='#') Return Item
+            a.dropdown-item(href='#') Problem with order
+            a.dropdown-item(href='#') Rate seller 
+      .modal-body.p-0
+        form
+          .left-image-upload.py-3.px-4
+            .img
+              img.w-100(src="dist/images/popup-upload.png" alt="")
+            .text
+              .title.mt-3.mb-2 Caption
+              p.mb-0 word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word 
+          .tags.py-3.px-4
+            .title Tagged items
+            ul.p-0.m-0.list-unstyled
+              li 
+                span.text-decoration-underline Hat, 
+                span.text-decoration-underline Polo 
+                span.text-decoration-underline Shirt, 
+                span.text-decoration-underline Gloves, 
+                span.text-decoration-underline Shoes 
+                | and 
+                span.text-decoration-underline Scarf  
+          .like-share.py-3.px-4
+            div
+              a(href="#")
+                <i class="fas fa-thumbs-up mr-2"></i>
+                | 1,234,405 Likes 
+            div
+              a(href="#")
+                <i class="fas fa-share-square mr-2"></i>
+                | 1,405 Shares   
+      .navigation-arrow
+        a(href="#") 
+          <i class="fal fa-angle-left"></i>  
+        a.right(href="#") 
+          <i class="fal fa-angle-right"></i>          
+
+

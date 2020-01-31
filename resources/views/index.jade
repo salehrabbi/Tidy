@@ -1,1 +1,25 @@
-a(href="order.html") hello
+extends layouts/app.jade
+
+block title
+  title Home
+
+block vars
+  - var bodyClass = 'background-white';  
+
+block main
+  main.py-5
+    .container
+      label
+        span Popups
+      include ./popup/uploading-photo.jade  
+      include ./popup/successful-upload.jade  
+      include ./popup/photo-open.jade  
+      include ./popup/report.jade  
+      include ./popup/share.jade  
+  style.
+    main .container .modal{
+    display: none !important; 
+    }
+    main .container .modal.show{
+      display: flex !important;
+    }

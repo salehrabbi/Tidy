@@ -1,0 +1,75 @@
+button.btn.btn-primary.w-100(type='button' data-toggle='modal' data-target='#uploading-photo')
+  | uploading photo
+#uploading-photo.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true')
+  .modal-dialog(role='document')
+    .modal-content
+      .modal-header.justify-content-center.py-4
+        h5.modal-title Uploading a new photo...
+        .close(data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') ×
+      .modal-body.p-0
+        form.upload-photo-popup
+          .left-image-upload.p-4
+            .img
+              img.w-100(src="dist/images/popup-upload.png" alt="")
+            .text
+              .title.mb-1.mt-2 Write your caption below..
+              <textarea placeholder="Start typing your caption here..."></textarea>
+          .right-upload-form
+            .p-4
+              .title.mb-4 Tag items in your photo to generate sales and make money!
+              .check-box.mb-3
+                label.check(for="mens")
+                  input#mens.sr-only(type="checkbox")
+                  .check-mark.button MENS
+                label.check(for="women")
+                  input#women.sr-only(type="checkbox")
+                  .check-mark.button WOMENS  
+                label.check(for="kid")
+                  input#kid.sr-only(type="checkbox")
+                  .check-mark.button KIDS 
+              .input-text.mb-3(style="max-width: 430px")
+                label(for="address-2") 
+                  .title Product name:
+                  input(type="text" id="address-2" placeholder="Address line 2")   
+              .input-select.mb-3
+                label
+                  .title.d-block Product brand:
+                .date-select(style="max-width: 430px")
+                  select.selectpicker.form-control(title="Predicted search box/dropdown")
+                    - for(m=1; m<41; m++)
+                      option= m+1980    
+              .category.mb-3
+                .input-select
+                  label
+                    .title.d-block Category:
+                  .date-select(style="max-width: 430px")
+                    select.selectpicker.form-control(title="Drop down")
+                      - for(m=1; m<41; m++)
+                        option= m+1980 
+                .input-select
+                  label
+                    .title.d-block Sub-category:
+                  .date-select(style="max-width: 430px")
+                    select.selectpicker.form-control(title="Drop down")
+                      - for(m=1; m<41; m++)
+                        option= m+1980        
+              a.button.background-black.mt-2(href="#") 
+                .title.mb-0 Tag item       
+            .tags.p-4
+              .title Tagged items
+              ul.p-0.m-0.list-unstyled
+                li 
+                  span.text-decoration-underline Hat, 
+                  span.text-decoration-underline Polo 
+                  span.text-decoration-underline Shirt, 
+                  span.text-decoration-underline Gloves, 
+                  span.text-decoration-underline Shoes 
+                  | and 
+                  span.text-decoration-underline Scarf  
+            .py-5.px-4
+              a.button.w-100.background-black.mx-auto.d-flex(href="#" style="max-width: 257px") 
+                .title.mb-0 Upload photo                 
+
+
+
