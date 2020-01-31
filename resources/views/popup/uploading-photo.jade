@@ -3,10 +3,10 @@ button.btn.btn-primary.w-100(type='button' data-toggle='modal' data-target='#upl
 #uploading-photo.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true')
   .modal-dialog(role='document')
     .modal-content
-      .modal-header.justify-content-center.py-4
+      .modal-header.justify-content-center.py-4.position-relative
         h5.modal-title Uploading a new photo...
-        .close(data-dismiss='modal' aria-label='Close')
-          span(aria-hidden='true') ×
+        .close.h-100.d-flex.justify-content-center.align-items-center(data-dismiss='modal' aria-label='Close')
+          img(src="dist/images/close.png" alt="")
       .modal-body.p-0
         form.upload-photo-popup
           .left-image-upload.p-4
