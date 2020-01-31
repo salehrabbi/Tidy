@@ -80,6 +80,7 @@
           color: #878787;
           font-family: $o;
           cursor: pointer;
+          letter-spacing: 0.2em;
         }
         input:checked ~ .check-mark {
           background: #000;
@@ -233,12 +234,17 @@
   &.share {
     li {
       position: relative;
+      &:hover {
+        i {
+          background: #878787;
+          color: #fff;
+        }
+      }
     }
     i {
       height: 18px;
       width: 18px;
-      background: #878787;
-      color: #fff;
+      color: #878787;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -247,13 +253,10 @@
       position: absolute;
       right: 100px;
       top: 18px;
+      transition: 0.3s;
+
       @include sm {
         right: 50px;
-      }
-      &.fa-link {
-        background: none;
-        font-size: 18px;
-        color: #878787;
       }
     }
   }
