@@ -224,11 +224,19 @@
 .report {
   li {
     text-align: center;
-    padding: 13px;
-    border-bottom: 2px solid #e3e3e3;
+
     a {
       font-size: 15px;
       color: #000000;
+      padding: 13px;
+      display: block;
+      text-decoration: none;
+      border-bottom: 2px solid #e3e3e3;
+      &.hover:hover {
+        background: #878787;
+        color: #fff;
+        border-color: #878787;
+      }
     }
   }
   &.share {
