@@ -1,5 +1,6 @@
 .dashboard {
   padding: 200px 0;
+  // min-height: calc(100vh - 200px);
   @include xl-min {
     .container {
       width: 100%;
